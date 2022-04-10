@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.GenButton {
+    height: 2em;
+    border: solid 2px black;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    background: transparent;
+}
+
+.GenButton:hover {
+    border: solid 2px white;
+    color: white;
+    transition: all 0.5s;
+}

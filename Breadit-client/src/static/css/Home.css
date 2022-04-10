@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.Scrollable-HomeContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Home-1 {
+    border: 2px solid black;
+    margin-bottom: 10em;
+}
+
+.Home-1 p {
+    padding: 20px;
+    width: 20em;
+    font-size: 1.5em;
+    font-family: 'Inconsolata', monospace;
+}

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.headerNav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    align-items: center;
+    border-bottom: 2px solid black;
+    height: 4em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo {
+    height: 4em;
+    width: 4em;
+}
+
+.Breadit {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Inconsolata', monospace;
+    margin-left: 2em;
+    text-decoration: none;
+}
+
+.Breadit {
+    display: inline-block;
+    position: relative;
+    color: black;
+}
+
+.Breadit:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.Breadit:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#signup {
+    margin-left: 1em;
+    width: 5em;
+}
+
+#login {
+    margin-left: 1em;
+    width: 5em;
+}
