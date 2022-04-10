@@ -9,6 +9,12 @@ router.put('/title/:title', async (req, res) => {
     //Find Creator
     const user_ = await User.findOne({ email: res.locals.user['user'] });
 
+    // Check if Loaf exists
+    const loaf_check = await Loaf.findOne({ title: req.params.title });
+    if (loaf_check != null) {
+        return res.status(403).send("Loaf already exists")
+    }
+
     // Create Loaf
     const loaf_ = new Loaf({ title: req.params.title, members: [user_] })
 

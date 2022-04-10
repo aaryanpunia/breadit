@@ -9,11 +9,13 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
     date: {
         type: Date,
         default: new Date(moment.utc().format()),
     },
     content: String,
+    bread: { type: Number, default: 0, required: true }
 });
 
 module.exports = mongoose.model('Post', PostSchema);

@@ -12,6 +12,7 @@ const LoafSchema = new mongoose.Schema({
             message: "A Loaf title can only contain letters and numbers",
         }
     },
+    bread: { type: Number, default: 0, required: true },
     posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
     members: [{ type: Schema.Types.ObjectId, ref: 'User' }],
 });

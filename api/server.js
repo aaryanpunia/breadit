@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 dotenv.config();
 
 // import routes
+const welcome = require('./routes/welcome');
 const signup = require('./routes/signup');
 const login = require('./routes/login');
 const getPast = require('./routes/getPastThis');
@@ -31,6 +32,7 @@ try {
 }
 
 // use routes
+app.use('/', welcome);
 app.use('/signup', signup);
 app.use('/login', login);
 app.use('/secure', getPast);

@@ -27,7 +27,7 @@ router.put('/user/:user/pass/:pass', async (req, res) => {
     //Return comparison result
     if (correct) {
         const token = jwt.sign({ user: req.params.user }, process.env.TOKEN_SECRET, { expiresIn: '1h' });
-        res.json(token);
+        res.json({ "token": token });
     } else {
         res.send("Invalid password");
     }

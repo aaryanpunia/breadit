@@ -10,8 +10,6 @@ router.put('/post/:id/content/:content', async (req, res) => {
 
     // Find post by ID
     const post_ = await Post.findOne({ _id: req.params.id });
-    console.log(user_);
-    console.log(post_);
 
     if (post_ != null && user_ != null && post_.author_id.equals(user_._id)) {
         Post.updateOne({ _id: post_._id }, { content: req.params.content }, function (err, data) {

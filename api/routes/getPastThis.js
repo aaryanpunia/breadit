@@ -26,6 +26,8 @@ const makeLoaf = require('./authedRoutes/makeLoaf');
 const postToLoaf = require('./authedRoutes/postToLoaf');
 const deletePost = require('./authedRoutes/deletePost');
 const updatePost = require('./authedRoutes/updatePost');
+const GiveBreadToPost = require('./authedRoutes/GiveBreadToPost');
+const CommentOnPost = require('./authedRoutes/CommentOnPost');
 
 // Auth middleware
 router.use(authenticateToken);
@@ -35,6 +37,8 @@ router.use('/makeloaf', makeLoaf);
 router.use('/postloaf', postToLoaf);
 router.use('/deletepost', deletePost);
 router.use('/updatepost', updatePost);
+router.use('/givepostbread', GiveBreadToPost);
+router.use('/commentpost', CommentOnPost);
 
 
 module.exports = router;

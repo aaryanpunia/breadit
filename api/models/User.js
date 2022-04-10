@@ -20,7 +20,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    bread: { type: Number, default: 0 },
+    bread: { type: Number, default: 100 },
     loafs: [{ type: Schema.Types.ObjectId, ref: 'Loaf' }],
     posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
 });
