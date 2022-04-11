@@ -1,0 +1,105 @@
+.LoafBar-container {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.LoafBar-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LoafBar-empty span {
+    font-size: 1.5em;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(0, 0, 0);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 3s steps(20, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 200px;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: rgb(0, 0, 0);
+    }
+}
+
+.LoafBar-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoafBar-search button {
+    font-size: 1.2em;
+    padding: 1em;
+    border: none;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.LoafBar-search button:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.LoafBar-search input {
+    font-size: 1.2em;
+    padding: 1em;
+    outline: none;
+    border: none;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.LoafBar-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.Loaf-item {
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.Loaf-item:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: color 0.5s, border-color 0.1s, box-shadow 0.5s, background-color 0.5s;
+}

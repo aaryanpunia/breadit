@@ -1,10 +1,23 @@
 import React from 'react';
 import '../static/css/Signup.css';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
-function Signup() {
+function Signup(props) {
+    let navigate = useNavigate();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = (data) => {
+        console.log(data);
+        axios.put(`https://breadit-api.herokuapp.com/signup/user/${data['Email']}/pass/${data['Password']}`)
+            .then(function (response) {
+                navigate('/login');
+            })
+            .catch(function (error) {
+                console.log(error);
+                navigate('/signupfailed');
+            })
+    };
 
     return (
         <div className="login-container">

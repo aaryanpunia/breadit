@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 .login-container {
     height: 100vh;
     display: flex;
@@ -11,8 +13,6 @@
     padding: 30px;
     margin-bottom: 7em;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 * {
     font-family: 'Inconsolata', monospace;
